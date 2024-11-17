@@ -83,7 +83,10 @@ function App() {
       {/* Modal */}
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()} // Prevent click on modal content from closing the modal
+          >
             <form onSubmit={handleSubmit}>
               <h2>Fill Details</h2>
 
