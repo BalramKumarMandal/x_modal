@@ -59,7 +59,7 @@ function App() {
     const today = new Date();
     const dobDate = new Date(dob);
     if (dobDate > today) {
-      alert('Invalid date of birth. Please enter a valid date.');
+      alert('Invalid date of birth. Date of birth cannot be in future.');
       return;
     }
 
@@ -97,6 +97,7 @@ function App() {
                 id="username"
                 value={formData.username}
                 onChange={handleChange}
+                required
               />
 
               {/* Email */}
